@@ -6,7 +6,8 @@ test repo for embedding logo into QR image and color, format customization
 
 You must have rsvg-convert installed 
 
-```sudo apt-get rsvg-convert```
+```sudo apt install librsvg2-bin```
+```pip install pypng```
 
 Requires at least python3.8
 

@@ -17,7 +17,7 @@ RED = (255, 0, 0)
 DEEP_RED = (170, 0, 0)  # '#ae0909'
 WHITE = (255, 255, 255)
 
-lnurl = "LNURL1DP68GURN8GHJ7MR9VAJKUEPWD3HXY6T5WVHXXMMD9AKXUATJD3CZ7CTSDYHHVVF0D3H82UNV9UUNWVCE4EM6P"
+lnurl = "LNURL1DP68GURN8GHJ7UM9DEJZUMRPD9EK2EFWDAEXWTMVDE6HYMRS9ASHQ6F0WCCJ7MRWW4EXCTEKF98VLF"
 
 lnurl_file = "images/lnurl.png" # make this id number based for uniqueness
 output_svg = 'output.svg'
@@ -31,7 +31,7 @@ def create_laisee_qrcode(lnurl: str, idnumber: str, expires: str, sats: str):
     pyqr = pyqrcode.create(lnurl)
 
     # change your QR code foreground and background colors here
-    pyqr.png(lnurl_file, scale=3, module_color=[255,255,255,255], background=[170, 0, 0])
+    pyqr.png(lnurl_file, scale=3, module_color=[91,17,16], background=[220, 184, 102])
 
     with open('templates/inlet_tiger_cut.svg', 'r') as f:
         templ = f.read()
@@ -53,4 +53,4 @@ if __name__ == "__main__":
     output_png = create_laisee_qrcode(lnurl, idnumber, expires, sats)
 
     # view file created
-    subprocess.run(['open', output_png])
+#    subprocess.run(['open', output_png])
